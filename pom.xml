@@ -44,8 +44,8 @@
 	</properties>
 
 	<scm>
-		<connection>scm:git:https://github.com/${scm.repository.owner}/${scm.repository.name}.git</connection>
-		<developerConnection>scm:git:https://github.com/${scm.repository.owner}/${scm.repository.name}.git</developerConnection>
+		<connection>scm:git:git@github.com:${scm.repository.owner}/${scm.repository.name}.git</connection>
+		<developerConnection>scm:git:git@github.com:${scm.repository.owner}/${scm.repository.name}.git</developerConnection>
 		<url>https://github.com/${scm.repository.owner}/${scm.repository.name}.git</url>
 		<tag>HEAD</tag>
 	</scm>
