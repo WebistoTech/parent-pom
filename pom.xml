@@ -39,6 +39,8 @@
 		<fail.findbugs>true</fail.findbugs>
 		<fail.coverage>true</fail.coverage>
 		<fail.ncss>true</fail.ncss>
+		
+		<release.preparation.goals>package install</release.preparation.goals>
 	</properties>
 
 	<scm>
@@ -139,7 +141,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.0-beta-2</version>
+				<version>2.1</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<ccnLimit>10</ccnLimit>
@@ -204,7 +206,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<preparationGoals>package install site</preparationGoals>
+					<preparationGoals>${release.preparation.goals}</preparationGoals>
 					<scmCommentPrefix>#42'[ci skip]'</scmCommentPrefix>
 				</configuration>
 			</plugin>
@@ -391,7 +393,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.0-beta-2</version>
+				<version>2.1</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
