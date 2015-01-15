@@ -32,6 +32,7 @@
 		<scm.repository.owner>mkolisnyk</scm.repository.owner>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.pmd.excludes>**/generated-sources/**</maven.pmd.excludes>
+		<maven.site.dryrun>false</maven.site.dryrun>
 		
 		<fail.pmd>true</fail.pmd>
 		<fail.checkstyle>true</fail.checkstyle>
@@ -101,8 +102,8 @@
 					<repositoryName>${scm.repository.name}</repositoryName>
 					<repositoryOwner>${scm.repository.owner}</repositoryOwner>
 					<merge>true</merge>
-					<path>${project.version}</path>
-					<dryRun>false</dryRun>
+					<path>${project.artifactId}-${project.version}</path>
+					<dryRun>${maven.site.dryrun}</dryRun>
 				</configuration>
 				<executions>
 					<execution>
