@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.mkolisnyk</groupId>
 	<artifactId>parent-pom</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -19,6 +19,13 @@
 			<email>kolesnik.nickolay@gmail.com</email>
 		</developer>
 	</developers>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>9</version>
+	</parent>
+
 	<properties>
 		<java.main.class />
 		<scm.repository.name>${project.artifactId}</scm.repository.name>
@@ -185,9 +192,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.7</version>
-				<configuration>
-					<repositoryId>sonatype-nexus-staging</repositoryId>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
